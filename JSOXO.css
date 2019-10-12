@@ -1,0 +1,14 @@
+#myCanvas{
+    background-color:darkgrey;
+    
+}
+
+#titleBlock{
+    width:350px;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    height:25px;
+    background-color:black;
+    color:white;
+    padding-top:5px;
+}
