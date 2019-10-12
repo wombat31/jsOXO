@@ -1,8 +1,9 @@
 var board = [
-    ["X","X","X"],
-    ["X","O","X"],
-    ["X","X","X"]
+    [".",".","."],
+    [".",".","."],
+    [".",".","."]
 ]
+var oTurn = true;
 
 function drawBoard(){
     var canvas = document.getElementById("myCanvas");
@@ -76,9 +77,134 @@ function drawBoard(){
         }
     }
 
-    
-
-
 }
+//add a listener function for gameplay
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+myCanvas.addEventListener('click', function(event) {
+    var rect = myCanvas.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var y = event.clientY - rect.top;
+    if (oTurn){
+        //top row
+        if(x>25 && x < 125 && y>25 && y <125){
+            board[0][0] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        else if(x>125 && x<225 && y>25 && y<125){
+            board[0][1] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        else if(x>225 && x< 325 && y>25 && y<125){
+            board[0][2] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        //middle row
+        if(x>25 && x < 125 && y>125 && y <225){
+            board[1][0] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        else if(x>125 && x<225 && y>125 && y <225){
+            board[1][1] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        else if(x>225 && x< 325 && y>125 && y <225){
+            board[1][2] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        //bottom row
+        if(x>25 && x < 125 && y>225 && y <325){
+            board[2][0] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        else if(x>125 && x<225 && y>225 && y <325){
+            board[2][1] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+        else if(x>225 && x< 325 && y>225 && y <325){
+            board[2][2] = "O";
+            drawBoard();
+            oTurn = false;
+            document.getElementById('turnIndicator').innerHTML = "X Turn";
+        }
+    } else {
+        //top row
+        if(x>25 && x < 125 && y>25 && y <125){
+            board[0][0] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        else if(x>125 && x<225 && y>25 && y<125){
+            board[0][1] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        else if(x>225 && x< 325 && y>25 && y<125){
+            board[0][2] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        //middle row
+        if(x>25 && x < 125 && y>125 && y <225){
+            board[1][0] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        else if(x>125 && x<225 && y>125 && y <225){
+            board[1][1] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        else if(x>225 && x< 325 && y>125 && y <225){
+            board[1][2] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        //bottom row
+        if(x>25 && x < 125 && y>225 && y <325){
+            board[2][0] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        else if(x>125 && x<225 && y>225 && y <325){
+            board[2][1] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+        else if(x>225 && x< 325 && y>225 && y <325){
+            board[2][2] = "X";
+            drawBoard();
+            oTurn = true;
+            document.getElementById('turnIndicator').innerHTML = "O Turn";
+        }
+    }
+
+
+}, false);
 
 drawBoard();

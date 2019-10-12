@@ -12,3 +12,13 @@
     color:white;
     padding-top:5px;
 }
+
+#turnIndicator{
+    width:350px;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    height:25px;
+    background-color:black;
+    color:white;
+    padding-top:5px;
+}
