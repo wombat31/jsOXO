@@ -159,21 +159,21 @@ myCanvas.addEventListener('click', function(event) {
     if(gameRun){
         if (oTurn){
             //top row
-            if(x>25 && x < 125 && y>25 && y <125){
+            if(x>25 && x < 125 && y>25 && y <125 && board[0][0]== "."){
                 board[0][0] = "O";
                 drawBoard();
                 oTurn = false;
                 document.getElementById('turnIndicator').innerHTML = "X Turn";
                 winCheck();
             }
-            else if(x>125 && x<225 && y>25 && y<125){
+            else if(x>125 && x<225 && y>25 && y<125 && board[0][1]== "."){
                 board[0][1] = "O";
                 drawBoard();
                 oTurn = false;
                 document.getElementById('turnIndicator').innerHTML = "X Turn";
                 winCheck();
             }
-            else if(x>225 && x< 325 && y>25 && y<125){
+            else if(x>225 && x< 325 && y>25 && y<125 && board[0][2]== "."){
                 board[0][2] = "O";
                 drawBoard();
                 oTurn = false;
@@ -181,21 +181,21 @@ myCanvas.addEventListener('click', function(event) {
                 winCheck();
             }
             //middle row
-            if(x>25 && x < 125 && y>125 && y <225){
+            if(x>25 && x < 125 && y>125 && y <225 && board[1][0]== "."){
                 board[1][0] = "O";
                 drawBoard();
                 oTurn = false;
                 document.getElementById('turnIndicator').innerHTML = "X Turn";
                 winCheck();
             }
-            else if(x>125 && x<225 && y>125 && y <225){
+            else if(x>125 && x<225 && y>125 && y <225 && board[1][1]== "."){
                 board[1][1] = "O";
                 drawBoard();
                 oTurn = false;
                 document.getElementById('turnIndicator').innerHTML = "X Turn";
                 winCheck();
             }
-            else if(x>225 && x< 325 && y>125 && y <225){
+            else if(x>225 && x< 325 && y>125 && y <225 && board[1][2]== "."){
                 board[1][2] = "O";
                 drawBoard();
                 oTurn = false;
@@ -203,21 +203,21 @@ myCanvas.addEventListener('click', function(event) {
                 winCheck();
             }
             //bottom row
-            if(x>25 && x < 125 && y>225 && y <325){
+            if(x>25 && x < 125 && y>225 && y <325 && board[2][0]== "."){
                 board[2][0] = "O";
                 drawBoard();
                 oTurn = false;
                 document.getElementById('turnIndicator').innerHTML = "X Turn";
                 winCheck();
             }
-            else if(x>125 && x<225 && y>225 && y <325){
+            else if(x>125 && x<225 && y>225 && y <325 && board[2][1]== "."){
                 board[2][1] = "O";
                 drawBoard();
                 oTurn = false;
                 document.getElementById('turnIndicator').innerHTML = "X Turn";
                 winCheck();
             }
-            else if(x>225 && x< 325 && y>225 && y <325){
+            else if(x>225 && x< 325 && y>225 && y <325 && board[2][2]== "."){
                 board[2][2] = "O";
                 drawBoard();
                 oTurn = false;
@@ -226,21 +226,21 @@ myCanvas.addEventListener('click', function(event) {
             }
         } else {
             //top row
-            if(x>25 && x < 125 && y>25 && y <125){
+            if(x>25 && x < 125 && y>25 && y < 125 && board[0][0]== "."){
                 board[0][0] = "X";
                 drawBoard();
                 oTurn = true;
                 document.getElementById('turnIndicator').innerHTML = "O Turn";
                 winCheck();
             }
-            else if(x>125 && x<225 && y>25 && y<125){
+            else if(x>125 && x<225 && y>25 && y<125 && board[0][1]== "."){
                 board[0][1] = "X";
                 drawBoard();
                 oTurn = true;
                 document.getElementById('turnIndicator').innerHTML = "O Turn";
                 winCheck();
             }
-            else if(x>225 && x< 325 && y>25 && y<125){
+            else if(x>225 && x< 325 && y>25 && y<125 && board[0][2]== "."){
                 board[0][2] = "X";
                 drawBoard();
                 oTurn = true;
@@ -248,21 +248,21 @@ myCanvas.addEventListener('click', function(event) {
                 winCheck();
             }
             //middle row
-            if(x>25 && x < 125 && y>125 && y <225){
+            if(x>25 && x < 125 && y>125 && y <225 && board[1][0]== "."){
                 board[1][0] = "X";
                 drawBoard();
                 oTurn = true;
                 document.getElementById('turnIndicator').innerHTML = "O Turn";
                 winCheck();
             }
-            else if(x>125 && x<225 && y>125 && y <225){
+            else if(x>125 && x<225 && y>125 && y <225 && board[1][1]== "."){
                 board[1][1] = "X";
                 drawBoard();
                 oTurn = true;
                 document.getElementById('turnIndicator').innerHTML = "O Turn";
                 winCheck();
             }
-            else if(x>225 && x< 325 && y>125 && y <225){
+            else if(x>225 && x< 325 && y>125 && y <225 && board[1][2]== "."){
                 board[1][2] = "X";
                 drawBoard();
                 oTurn = true;
@@ -270,21 +270,21 @@ myCanvas.addEventListener('click', function(event) {
                 winCheck();
             }
             //bottom row
-            if(x>25 && x < 125 && y>225 && y <325){
+            if(x>25 && x < 125 && y>225 && y <325 && board[2][0]== "."){
                 board[2][0] = "X";
                 drawBoard();
                 oTurn = true;
                 document.getElementById('turnIndicator').innerHTML = "O Turn";
                 winCheck();
             }
-            else if(x>125 && x<225 && y>225 && y <325){
+            else if(x>125 && x<225 && y>225 && y <325 && board[2][1]== "."){
                 board[2][1] = "X";
                 drawBoard();
                 oTurn = true;
                 document.getElementById('turnIndicator').innerHTML = "O Turn";
                 winCheck();
             }
-            else if(x>225 && x< 325 && y>225 && y <325){
+            else if(x>225 && x< 325 && y>225 && y <325 && board[2][2]== "."){
                 board[2][2] = "X";
                 drawBoard();
                 oTurn = true;
